@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>회원 할 일</title>
+    </head>
+    <body>
+        <button id="get-todos">할 일 불러오기</button>
+        <table class="todos"></table>
+    </body>
+    <script>
+        const button = document.getElementById("get-todos");
+        button.addEventListener("click", (e) => {
+            todoService.findAll(todoLayout.showList);
+        });
+    </script>
+    <script src="service02.js"></script>
+    <script src="layout02.js"></script>
+</html>
+
+<!-- todo 10개 목록 구현
+아이디와 제목
+completed 상태에 따라 서로 다른 글자색으로 설정 -->
